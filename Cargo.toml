@@ -1,0 +1,11 @@
+[workspace]
+resolver = "2"
+members = ["hacker-rank/*"]
+exclude = []
+
+[workspace.package]
+authors = ["Ethan Lindemann"]
+edition = "2021"
+rust-version = "1.76"
+version = "0.1.0"
+license = "AGPL-3.0-or-later"

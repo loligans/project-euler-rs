@@ -1,0 +1,30 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable",
+      "cargo": {
+        "args": [
+          "build",
+          "--bin=between-two-sets",
+          "--package=between-two-sets"
+        ],
+        "filter": {
+          "name": "between-two-sets",
+          "kind": "bin"
+        }
+      },
+      "stdio": "${workspaceFolder}/hacker-rank/013-between-two-sets/stdio.txt",
+      "env": {
+        "OUTPUT_PATH": "${workspaceFolder}/hacker-rank/013-between-two-sets/output.txt"
+      },
+      "args": [ ],
+      "cwd": "${workspaceFolder}/hacker-rank/013-between-two-sets"
+    }
+  ]
+}

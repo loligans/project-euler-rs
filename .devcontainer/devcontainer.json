@@ -1,0 +1,43 @@
+{
+  "name": "project-euler",
+  "dockerFile": "Dockerfile",
+  "build": {
+    "args": {
+      "BUILDKIT_INLINE_CACHE": "0",
+      "RUST_VERSION": "latest"
+    }
+  },
+  "workspaceFolder": "/workspace",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        // rust-analyzer
+        "rust-lang.rust-analyzer",
+        // EditorConfig for VS Code
+        "EditorConfig.EditorConfig",
+        // Partial Diff
+        "ryu1kn.partial-diff",
+        // Toggle Excluded Files
+        "amodio.toggle-excluded-files",
+        // Scope to This
+        "rhalaly.scope-to-this"
+      ]
+    }
+  },
+  "containerEnv": {
+  },
+  "mounts": [
+    {
+      "type": "bind",
+      "source": "${localWorkspaceFolder}/.devcontainer/.zshrc",
+      "target": "/home/coder/.zshrc"
+    }
+  ],
+  "workspaceMount": "type=bind,source=${localWorkspaceFolder}/,target=/workspace",
+  "forwardPorts": [ ],
+  "postCreateCommand": "/usr/local/share/postCreate.sh",
+  "remoteUser": "coder",
+  "features": {
+    "ghcr.io/devcontainers/features/git": "os-provided"
+  }
+}
